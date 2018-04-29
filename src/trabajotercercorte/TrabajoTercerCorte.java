@@ -29,7 +29,7 @@ public class TrabajoTercerCorte {
                 switch (opcion) {
                     case 1:
                         elegir = Integer.parseInt(JOptionPane.showInputDialog(null,
-                                "Metodo de Ordenamiento Burbuja \n"
+                                "Metodo de Ordenamiento Brbuja \n"
                                 + "1-Insertar Datos\n"
                                 + "2-Listar Datos Ingresados \n "
                                 + "3-Ordenar Datos \n"
@@ -43,14 +43,10 @@ public class TrabajoTercerCorte {
                                 Arreglo.Mostrar(vector);
                                 break;
                             case 3:
-                                JTextArea jama_Muestre = new JTextArea();
-                                jama_Muestre.setText("Vector Organizado\n");
                                 Arreglo obj = new Arreglo();
                                 obj.ordenarBurbuja(vector);
-                                for (int i = 0; i < vector.length; i++) {
-                                    jama_Muestre.append(" " + vector[i]);
-                                }
-                                JOptionPane.showMessageDialog(null, jama_Muestre);
+                                Arreglo.Imprimir(vector);
+
                                 break;
                             default:
                                 JOptionPane.showMessageDialog(null, "Su opcion no existe");
@@ -73,13 +69,8 @@ public class TrabajoTercerCorte {
                                 Arreglo.Mostrar(vector);
                                 break;
                             case 3:
-                                JTextArea jama_Muestre = new JTextArea();
-                                jama_Muestre.setText("Vector Organizado\n");
                                 Arreglo.shell(vector);
-                                for (int i = 1; i < vector.length; i++) {
-                                    jama_Muestre.append(" " + vector[i]);
-                                }
-                                JOptionPane.showMessageDialog(null, jama_Muestre);
+                                Arreglo.Imprimir(vector);
                             default:
                                 JOptionPane.showMessageDialog(null, "Su opcion no existe");
                         }
@@ -100,14 +91,9 @@ public class TrabajoTercerCorte {
                                 Arreglo.Mostrar(vector);
                                 break;
                             case 3:
-                                JTextArea jama_Muestre = new JTextArea();
-                                jama_Muestre.setText("Vector Organizado\n");
                                 OrdenamientoQuickSort o = new OrdenamientoQuickSort();
                                 o.ordenarquicksort(vector);
-                                for (int i = 0; i < vector.length; i++) {
-                                    jama_Muestre.append(" " + vector[i]);
-                                }
-                                JOptionPane.showMessageDialog(null, jama_Muestre);
+                                Arreglo.Imprimir(vector);
                                 break;
                             default:
                                 JOptionPane.showMessageDialog(null, "Su opcion no existe");
@@ -129,21 +115,8 @@ public class TrabajoTercerCorte {
                                 Arreglo.Mostrar(vector);
                                 break;
                             case 3:
-                                JTextArea jama_Muestre = new JTextArea();
-                                jama_Muestre.setText("Vector Organizado\n");
-                                for (int i = 1; i < vector.length; i++) {
-                                    if (vector[i] < vector[i - 1]) {
-                                        aux = vector[i];
-                                        vector[i] = vector[i - 1];
-                                        vector[i - 1] = aux;
-                                        cambios = true;
+                                Arreglo.Imprimir(vector);
 
-                                    }
-                                }
-                                for (int i = 0; i < vector.length; i++) {
-                                    jama_Muestre.append(" " + vector[i]);
-                                }
-                                JOptionPane.showMessageDialog(null, jama_Muestre);
                                 break;
 
                         }

@@ -2,11 +2,22 @@ package trabajotercercorte;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
+
 /**
  *
  * @author Tamayo
  */
 public class Arreglo {
+
+    public static void Imprimir(int[] vector) {
+        JTextArea jama_Muestre = new JTextArea();
+        jama_Muestre.setText("Vector Organizado\n");
+        for (int i = 0; i < vector.length; i++) {
+            jama_Muestre.append(" " + vector[i]);
+        }
+        JOptionPane.showMessageDialog(null, jama_Muestre);
+
+    }
 
     public static void Ingresar(int[] vector) {
         String dato;
@@ -17,15 +28,15 @@ public class Arreglo {
             vector[i] = numero;
         }
     }
-    
+
     public static void Mostrar(int[] vector) {
         JTextArea jama_Muestre = new JTextArea();
         jama_Muestre.setText("VECTOR\n");
         for (int j = 0; j < vector.length; j++) {
             jama_Muestre.append(" " + vector[j]);
-          }
+        }
         JOptionPane.showMessageDialog(null, jama_Muestre);
-        
+
     }
 
     public void ordenarBurbuja(int[] vector) {
@@ -72,5 +83,5 @@ public class Arreglo {
             }
         }
     }
-    
+
 }
